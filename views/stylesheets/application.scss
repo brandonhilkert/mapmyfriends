@@ -30,16 +30,28 @@ body {
 }
 
 .share {
-  margin-bottom: 10px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -110px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  text-align: center;
 
   img {
     vertical-align: middle
   }
 
   a {
-    color: #fffcf1;
+    color: $text-color;
     text-decoration: none
   }
+}
+
+#map {
+  width: 100%;
+  height: 100%;
 }
 
 .footer {

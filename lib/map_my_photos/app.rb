@@ -30,7 +30,7 @@ module MapMyPhotos
 
     get '/auth/instagram/callback' do
       user = MapMyPhotos::User.create(request.env["omniauth.auth"])
-      session[:created_slideshow] = true
+      session[:created_map] = true
       redirect to("/#{user.nickname}")
     end
 
@@ -39,7 +39,10 @@ module MapMyPhotos
 
       if @user
         Instagram.access_token = @user.access_token
-        @photos = Instagram.user_recent_media(count: 50)
+        photos = Instagram.user_recent_media(count: 50)
+        puts photos.inspect
+        @locations = photos.map{ |photo| [photo["location"], photo["location"]] if photo["location"] }
+        puts @locations.each
         erb :show
       else
         @nickname = params[:nickname]

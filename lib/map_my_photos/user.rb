@@ -6,7 +6,7 @@ module MapMyPhotos
       @nickname, @access_token = nickname, access_token
     end
 
-    def slideshow_url
+    def map_url
       "http://mapmyphotosfor.me/#{nickname}"
     end
 

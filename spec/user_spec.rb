@@ -12,10 +12,10 @@ describe MapMyPhotos::User do
       }
     }
 
-  describe "#slideshow_url" do
+  describe "#map_url" do
     it "should create the correct url" do
       user = MapMyPhotos::User.new("brandon", "23asdfas")
-      user.slideshow_url.should == "http://mapmyphotosfor.me/brandon"
+      user.map_url.should == "http://mapmyphotosfor.me/brandon"
     end
   end
 
