@@ -11,6 +11,11 @@ module MapMyPhotos
       provider :instagram, MapMyPhotos.config["INSTAGRAM_CLIENT_ID"], MapMyPhotos.config["INSTAGRAM_CLIENT_SECRET"]
     end
 
+    get '/stylesheets/:name.css' do
+     content_type "text/css", charset: "utf-8"
+     scss :"stylesheets/#{params[:name]}"
+    end
+
     get '/' do
       erb :index
     end

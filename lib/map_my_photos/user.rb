@@ -7,7 +7,7 @@ module MapMyPhotos
     end
 
     def slideshow_url
-      "http://instashow.me/#{nickname}"
+      "http://mapmyphotosfor.me/#{nickname}"
     end
 
     def self.find_access_token_by_nickname(nickname)

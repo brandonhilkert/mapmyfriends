@@ -1,8 +1,11 @@
+$background-color: #fffcf1;
+$text-color: #52433e;
+
 body {
-  background-color: #1e1e1e;
+  background-color: $background-color;
   font-family: "Myriad Pro Condensed", "Gill Sans", "Lucida Grande", Helvetica, sans-serif;
   font-weight: 100;
-  color: #fffcf1;
+  color: $text-color;
 }
 .clear { clear: both; }
 .tagline { color: #4d4a42; font-size: 1.1em; }
@@ -28,57 +31,41 @@ body {
 
 .share {
   margin-bottom: 10px;
-}
 
-.share img {
-  vertical-align: middle
-}
+  img {
+    vertical-align: middle
+  }
 
-.share a {
-  color: #fffcf1;
-  text-decoration: none
-}
-
-.caption {
-  margin-bottom: 5px;
-}
-
-.date {
-  color: #4d4a42;
+  a {
+    color: #fffcf1;
+    text-decoration: none
+  }
 }
 
 .footer {
-  border-top: 1px solid #4d4a42;
-  color: #4d4a42;
+  border-top: 1px solid $text-color;
+  color: $text-color;
   font-size: 0.9em;
   margin-top: 20px;
-}
 
-.footer img {
-  max-width: 24px;
-  max-height: 24px;
-}
+  img {
+    max-width: 24px;
+    max-height: 24px;
+  }
 
-.footer a {
-  color: #4d4a42;
-  text-decoration: none;
-}
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
 
-.footer a:hover {
-  text-decoration: underline;
-}
+  ul {
+    margin: 10px auto 20px;
+    width: 500px;
+    list-style: none;
 
-.footer ul {
-  margin: 10px auto 20px;
-  width: 500px;
-  list-style: none
-}
-
-.footer ul li {
-  float: left;
-  padding: 0 5px;
-}
-
-.footer ul li iframe {
-  float: left;
+    li {
+      float: left;
+      padding: 0 5px;
+    }
+  }
 }

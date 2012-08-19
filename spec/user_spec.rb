@@ -15,7 +15,7 @@ describe MapMyPhotos::User do
   describe "#slideshow_url" do
     it "should create the correct url" do
       user = MapMyPhotos::User.new("brandon", "23asdfas")
-      user.slideshow_url.should == "http://MapMyPhotos.me/brandon"
+      user.slideshow_url.should == "http://mapmyphotosfor.me/brandon"
     end
   end
 
@@ -62,7 +62,7 @@ describe MapMyPhotos::User do
   describe ".formalize_key" do
     it "returns proper key for env" do
       MapMyPhotos.stub(env: "development")
-      MapMyPhotos::User.formalize_key("access_token").should == "instashow:development:access_token"
+      MapMyPhotos::User.formalize_key("access_token").should == "mapmyphotos:development:access_token"
     end
   end
 end
