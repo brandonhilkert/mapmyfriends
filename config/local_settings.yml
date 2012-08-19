@@ -1,0 +1,18 @@
+defaults: &defaults
+  INSTAGRAM_CLIENT_ID: 13de2753d7834648ac2b245535070792
+  INSTAGRAM_CLIENT_SECRET: 015bbc77b7d949099889f25c1e973783
+  MIXPANEL_TOKEN: 1fdb3eb9d4597fcc2dea3c490097bf67
+  REDIS_URL: redis://localhost:6379
+  SITE_URL: localhost:3000
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  INSTAGRAM_CLIENT_ID: 5010d455f7e3477d903380e6e1619e32
+  INSTAGRAM_CLIENT_SECRET: d4f6d96e9829494c9babf20cb2579724
+  SITE_URL: bh-instashow.herokuapp.com
