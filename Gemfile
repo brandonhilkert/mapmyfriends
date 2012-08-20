@@ -5,12 +5,11 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sass'
 gem 'thin'
-gem 'instagram'
-gem 'omniauth-instagram'
-gem 'redis'
-gem 'rake'
+gem 'omniauth-facebook'
+gem 'koala'
+gem 'typhoeus'
+gem 'geokit'
 
 group :development, :test do
   gem 'debugger'
-  gem 'rspec'
 end

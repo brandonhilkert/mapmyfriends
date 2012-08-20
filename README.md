@@ -1,7 +1,7 @@
-Map My Photos
+Map My Friends
 =============
 
-Map My Photos is a Sinatra web application that maps your latest Instagram photos.
+Map My Friends is a Sinatra web application that maps your friends.
 
 Usage
 -----
@@ -16,4 +16,4 @@ Copyright
 Copyright (c) 2012 Brandon Hilkert.
 See [LICENSE][] for details.
 
-[license]: https://github.com/brandonhilkert/mapmyphotos/blob/master/LICENSE
+[license]: https://github.com/brandonhilkert/mapmyfriends/blob/master/LICENSE

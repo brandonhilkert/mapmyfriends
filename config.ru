@@ -1,6 +1,6 @@
 $: << File.expand_path('../lib', __FILE__)
 
 require 'rubygems'
-require 'map_my_photos'
+require 'map_my_friends'
 
-run MapMyPhotos::App
+run MapMyFriends::App
