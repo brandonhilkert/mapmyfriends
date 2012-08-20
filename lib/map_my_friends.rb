@@ -22,4 +22,4 @@ module MapMyFriends
   end
 end
 
-require File.expand_path('../map_my_friends/app', __FILE__)
+Dir["./lib/map_my_friends/*.rb"].each { |f| require f }

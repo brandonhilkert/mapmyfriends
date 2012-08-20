@@ -1,6 +1,6 @@
 <script type="text/javascript">
   $(function() {
-    var myLatlng = new google.maps.LatLng(<%= @location %>);
+    var myLatlng = new google.maps.LatLng(<%= @locations.first.latitude %>, <%= @locations.first.longitude %>);
     var myOptions = {
       zoom: 10,
       center: myLatlng,
@@ -8,20 +8,24 @@
     };
     var map = new google.maps.Map(document.getElementById("map"), myOptions);
 
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: "Hello World!"
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-      var infowindow = new google.maps.InfoWindow({
-        content: 'Change the zoom level',
-        position: marker.position
+    <% @locations.each_with_index do |location, index| %>
+      var latLng_<%= index %> = new google.maps.LatLng(<%= location.latitude %>, <%= location.longitude %>);
+      var marker_<%= index %> = new google.maps.Marker({
+        position: latLng_<%= index %>,
+        map: map,
+        title: "Hello World!"
       });
 
-      infowindow.open(map);
-    });
+      google.maps.event.addListener(marker_<%= index %>, "click", function() {
+        var infowindow_<%= index %> = new google.maps.InfoWindow({
+          content: 'Marker <%= index %>',
+          position: marker_<%= index %>.position
+        });
+
+        infowindow_<%= index %>.open(map);
+      });
+    <% end %>
+
   });
 
   mixpanel.track("View Map", { nickname: "<%= session[:nickname] %>" });
