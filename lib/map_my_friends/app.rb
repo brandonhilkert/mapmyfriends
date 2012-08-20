@@ -25,7 +25,6 @@ module MapMyFriends
     get '/auth/facebook/callback' do
       session[:nickname] = request.env["omniauth.auth"].info.nickname
       session[:access_token] = request.env["omniauth.auth"].credentials.token
-      session[:created_map] = true
       redirect to("/#{session[:nickname]}")
     end
 

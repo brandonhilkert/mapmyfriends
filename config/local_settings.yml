@@ -1,7 +1,6 @@
 defaults: &defaults
   FACEBOOK_APP_ID: 267267416716973
   FACEBOOK_APP_SECRET: 71cbfaa54dee1b083efa6339a558be56
-  MIXPANEL_TOKEN: 02323f9445b9cb516f5ef2717b635bfe
   SITE_URL: localhost:3000
 
 development:
@@ -14,5 +13,4 @@ production:
   <<: *defaults
   FACEBOOK_APP_ID: 267267416716973
   FACEBOOK_APP_SECRET: 71cbfaa54dee1b083efa6339a558be56
-  MIXPANEL_TOKEN: 532d0932737582655982fcea0e2fe0a0
   SITE_URL: bh-mapmyfriends.herokuapp.com

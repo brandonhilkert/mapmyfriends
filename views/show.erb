@@ -28,12 +28,4 @@
 
   });
 
-  mixpanel.track("View Map", { nickname: "<%= session[:nickname] %>" });
-
-  <% if session[:created_map] %>
-    mixpanel.track("Create Map", { nickname: "<%= session[:nickname] %>" });
-    <% session[:created_map] = nil %>
-  <% end %>
-</script>
-
 <div id="map"></div>
